@@ -8,7 +8,7 @@ sh createTpr.sh // This will generate md.tpr
 gmx_mpi mdrun -deffnm md -plumed plumed_many.dat -cpi md.cpt
 ```
 
-The plumed_many.dat will compile ManyAngle.cpp and generate ManyAngle.o & ManyAngle.so. At the same time, this plumed file will also generate COLVAR and HILLS files with metadynamics adding bias as function of two angles calculated by the ManyAngle.cpp.
+The `plumed_many.dat` will compile `ManyAngle.cpp` and generate `ManyAngle.o` & `ManyAngle.so`. At the same time, this plumed file will also generate `COLVAR` and `HILLS` files with metadynamics adding bias as function of two angles calculated by the `ManyAngle.cpp`.
 
 # Note
 getPosition(0): x_0
