@@ -1,6 +1,6 @@
 # ManyAngle
 
-This repository demonstrates how to use ManyAngle.cpp with urea simulation produced by Pablo M. Piaggi and Michele Parrinello in [this paper](https://www.pnas.org/content/115/41/10251). The simulation files including inputParameters.mdp, melt450K-B.gro, topol.top, and centers.dat are taken from Pablo Piaggi. For more details, please refer to his github or website, or email him directly.
+This repository demonstrates how to use `ManyAngle.cpp` with urea simulation produced by Pablo M. Piaggi and Michele Parrinello in [this paper](https://www.pnas.org/content/115/41/10251). The simulation files including inputParameters.mdp, melt450K-B.gro, topol.top, and centers.dat are taken from Pablo Piaggi. For more details, please refer to his github or website, or email him directly.
 
 # How to perform simulation
 ```
@@ -20,3 +20,7 @@ getPosition(2): z_0
 getPosition(3): x_1
 
 ...
+
+- The original `ManyAngle2_ST.cpp` doesn't consider pbc when calculating molecular vectors.
+- Since our manyangle op need other thresold for complementary angles, we also remove up-down symmetry flag in `ManyAngle.cpp`. 
+- There is no significant difference with/without low comm, so we also remove it in `ManyAngle.cpp`.
